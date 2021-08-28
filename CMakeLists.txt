@@ -8,8 +8,8 @@ enable_testing()
 
 include_directories(include)
 
-add_executable(openmp_basic src/main.cpp)
-target_link_libraries(openmp_basic PUBLIC OpenMP::OpenMP_CXX)
+add_subdirectory(src/tests)
+add_subdirectory(src/assignment1)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})

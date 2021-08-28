@@ -53,12 +53,14 @@ CMAKE_BINARY_DIR = /home/hardeep/repos/parallel-course-repo/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/openmp_basic.dir/all
+all: src/tests/all
+all: src/assignment1/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: src/tests/preinstall
+preinstall: src/assignment1/preinstall
 
 .PHONY : preinstall
 
@@ -69,6 +71,7 @@ clean: CMakeFiles/ContinuousConfigure.dir/clean
 clean: CMakeFiles/ContinuousBuild.dir/clean
 clean: CMakeFiles/NightlyConfigure.dir/clean
 clean: CMakeFiles/NightlyMemoryCheck.dir/clean
+clean: CMakeFiles/ExperimentalTest.dir/clean
 clean: CMakeFiles/ContinuousUpdate.dir/clean
 clean: CMakeFiles/NightlyUpdate.dir/clean
 clean: CMakeFiles/ExperimentalMemCheck.dir/clean
@@ -83,17 +86,53 @@ clean: CMakeFiles/NightlyStart.dir/clean
 clean: CMakeFiles/ExperimentalCoverage.dir/clean
 clean: CMakeFiles/NightlyCoverage.dir/clean
 clean: CMakeFiles/ExperimentalStart.dir/clean
-clean: CMakeFiles/NightlyBuild.dir/clean
-clean: CMakeFiles/ExperimentalBuild.dir/clean
 clean: CMakeFiles/ExperimentalUpdate.dir/clean
 clean: CMakeFiles/ContinuousStart.dir/clean
 clean: CMakeFiles/ContinuousMemCheck.dir/clean
 clean: CMakeFiles/ContinuousTest.dir/clean
 clean: CMakeFiles/ContinuousSubmit.dir/clean
-clean: CMakeFiles/ExperimentalTest.dir/clean
-clean: CMakeFiles/openmp_basic.dir/clean
+clean: CMakeFiles/NightlyBuild.dir/clean
+clean: CMakeFiles/ExperimentalBuild.dir/clean
+clean: src/tests/clean
+clean: src/assignment1/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory src/assignment1
+
+# Recursive "all" directory target.
+src/assignment1/all:
+
+.PHONY : src/assignment1/all
+
+# Recursive "preinstall" directory target.
+src/assignment1/preinstall:
+
+.PHONY : src/assignment1/preinstall
+
+# Recursive "clean" directory target.
+src/assignment1/clean:
+
+.PHONY : src/assignment1/clean
+
+#=============================================================================
+# Directory level rules for directory src/tests
+
+# Recursive "all" directory target.
+src/tests/all: src/tests/CMakeFiles/openmp_basic.dir/all
+
+.PHONY : src/tests/all
+
+# Recursive "preinstall" directory target.
+src/tests/preinstall:
+
+.PHONY : src/tests/preinstall
+
+# Recursive "clean" directory target.
+src/tests/clean: src/tests/CMakeFiles/openmp_basic.dir/clean
+
+.PHONY : src/tests/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/NightlyMemCheck.dir
@@ -256,6 +295,33 @@ NightlyMemoryCheck: CMakeFiles/NightlyMemoryCheck.dir/rule
 CMakeFiles/NightlyMemoryCheck.dir/clean:
 	$(MAKE) -f CMakeFiles/NightlyMemoryCheck.dir/build.make CMakeFiles/NightlyMemoryCheck.dir/clean
 .PHONY : CMakeFiles/NightlyMemoryCheck.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/ExperimentalTest.dir
+
+# All Build rule for target.
+CMakeFiles/ExperimentalTest.dir/all:
+	$(MAKE) -f CMakeFiles/ExperimentalTest.dir/build.make CMakeFiles/ExperimentalTest.dir/depend
+	$(MAKE) -f CMakeFiles/ExperimentalTest.dir/build.make CMakeFiles/ExperimentalTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hardeep/repos/parallel-course-repo/build/CMakeFiles --progress-num= "Built target ExperimentalTest"
+.PHONY : CMakeFiles/ExperimentalTest.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/ExperimentalTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hardeep/repos/parallel-course-repo/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ExperimentalTest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hardeep/repos/parallel-course-repo/build/CMakeFiles 0
+.PHONY : CMakeFiles/ExperimentalTest.dir/rule
+
+# Convenience name for target.
+ExperimentalTest: CMakeFiles/ExperimentalTest.dir/rule
+
+.PHONY : ExperimentalTest
+
+# clean rule for target.
+CMakeFiles/ExperimentalTest.dir/clean:
+	$(MAKE) -f CMakeFiles/ExperimentalTest.dir/build.make CMakeFiles/ExperimentalTest.dir/clean
+.PHONY : CMakeFiles/ExperimentalTest.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/ContinuousUpdate.dir
@@ -636,60 +702,6 @@ CMakeFiles/ExperimentalStart.dir/clean:
 .PHONY : CMakeFiles/ExperimentalStart.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/NightlyBuild.dir
-
-# All Build rule for target.
-CMakeFiles/NightlyBuild.dir/all:
-	$(MAKE) -f CMakeFiles/NightlyBuild.dir/build.make CMakeFiles/NightlyBuild.dir/depend
-	$(MAKE) -f CMakeFiles/NightlyBuild.dir/build.make CMakeFiles/NightlyBuild.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hardeep/repos/parallel-course-repo/build/CMakeFiles --progress-num= "Built target NightlyBuild"
-.PHONY : CMakeFiles/NightlyBuild.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/NightlyBuild.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hardeep/repos/parallel-course-repo/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/NightlyBuild.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hardeep/repos/parallel-course-repo/build/CMakeFiles 0
-.PHONY : CMakeFiles/NightlyBuild.dir/rule
-
-# Convenience name for target.
-NightlyBuild: CMakeFiles/NightlyBuild.dir/rule
-
-.PHONY : NightlyBuild
-
-# clean rule for target.
-CMakeFiles/NightlyBuild.dir/clean:
-	$(MAKE) -f CMakeFiles/NightlyBuild.dir/build.make CMakeFiles/NightlyBuild.dir/clean
-.PHONY : CMakeFiles/NightlyBuild.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/ExperimentalBuild.dir
-
-# All Build rule for target.
-CMakeFiles/ExperimentalBuild.dir/all:
-	$(MAKE) -f CMakeFiles/ExperimentalBuild.dir/build.make CMakeFiles/ExperimentalBuild.dir/depend
-	$(MAKE) -f CMakeFiles/ExperimentalBuild.dir/build.make CMakeFiles/ExperimentalBuild.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hardeep/repos/parallel-course-repo/build/CMakeFiles --progress-num= "Built target ExperimentalBuild"
-.PHONY : CMakeFiles/ExperimentalBuild.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/ExperimentalBuild.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hardeep/repos/parallel-course-repo/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ExperimentalBuild.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hardeep/repos/parallel-course-repo/build/CMakeFiles 0
-.PHONY : CMakeFiles/ExperimentalBuild.dir/rule
-
-# Convenience name for target.
-ExperimentalBuild: CMakeFiles/ExperimentalBuild.dir/rule
-
-.PHONY : ExperimentalBuild
-
-# clean rule for target.
-CMakeFiles/ExperimentalBuild.dir/clean:
-	$(MAKE) -f CMakeFiles/ExperimentalBuild.dir/build.make CMakeFiles/ExperimentalBuild.dir/clean
-.PHONY : CMakeFiles/ExperimentalBuild.dir/clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/ExperimentalUpdate.dir
 
 # All Build rule for target.
@@ -825,58 +837,85 @@ CMakeFiles/ContinuousSubmit.dir/clean:
 .PHONY : CMakeFiles/ContinuousSubmit.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/ExperimentalTest.dir
+# Target rules for target CMakeFiles/NightlyBuild.dir
 
 # All Build rule for target.
-CMakeFiles/ExperimentalTest.dir/all:
-	$(MAKE) -f CMakeFiles/ExperimentalTest.dir/build.make CMakeFiles/ExperimentalTest.dir/depend
-	$(MAKE) -f CMakeFiles/ExperimentalTest.dir/build.make CMakeFiles/ExperimentalTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hardeep/repos/parallel-course-repo/build/CMakeFiles --progress-num= "Built target ExperimentalTest"
-.PHONY : CMakeFiles/ExperimentalTest.dir/all
+CMakeFiles/NightlyBuild.dir/all:
+	$(MAKE) -f CMakeFiles/NightlyBuild.dir/build.make CMakeFiles/NightlyBuild.dir/depend
+	$(MAKE) -f CMakeFiles/NightlyBuild.dir/build.make CMakeFiles/NightlyBuild.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hardeep/repos/parallel-course-repo/build/CMakeFiles --progress-num= "Built target NightlyBuild"
+.PHONY : CMakeFiles/NightlyBuild.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/ExperimentalTest.dir/rule: cmake_check_build_system
+CMakeFiles/NightlyBuild.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hardeep/repos/parallel-course-repo/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ExperimentalTest.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/NightlyBuild.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hardeep/repos/parallel-course-repo/build/CMakeFiles 0
-.PHONY : CMakeFiles/ExperimentalTest.dir/rule
+.PHONY : CMakeFiles/NightlyBuild.dir/rule
 
 # Convenience name for target.
-ExperimentalTest: CMakeFiles/ExperimentalTest.dir/rule
+NightlyBuild: CMakeFiles/NightlyBuild.dir/rule
 
-.PHONY : ExperimentalTest
+.PHONY : NightlyBuild
 
 # clean rule for target.
-CMakeFiles/ExperimentalTest.dir/clean:
-	$(MAKE) -f CMakeFiles/ExperimentalTest.dir/build.make CMakeFiles/ExperimentalTest.dir/clean
-.PHONY : CMakeFiles/ExperimentalTest.dir/clean
+CMakeFiles/NightlyBuild.dir/clean:
+	$(MAKE) -f CMakeFiles/NightlyBuild.dir/build.make CMakeFiles/NightlyBuild.dir/clean
+.PHONY : CMakeFiles/NightlyBuild.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/openmp_basic.dir
+# Target rules for target CMakeFiles/ExperimentalBuild.dir
 
 # All Build rule for target.
-CMakeFiles/openmp_basic.dir/all:
-	$(MAKE) -f CMakeFiles/openmp_basic.dir/build.make CMakeFiles/openmp_basic.dir/depend
-	$(MAKE) -f CMakeFiles/openmp_basic.dir/build.make CMakeFiles/openmp_basic.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hardeep/repos/parallel-course-repo/build/CMakeFiles --progress-num=1,2 "Built target openmp_basic"
-.PHONY : CMakeFiles/openmp_basic.dir/all
+CMakeFiles/ExperimentalBuild.dir/all:
+	$(MAKE) -f CMakeFiles/ExperimentalBuild.dir/build.make CMakeFiles/ExperimentalBuild.dir/depend
+	$(MAKE) -f CMakeFiles/ExperimentalBuild.dir/build.make CMakeFiles/ExperimentalBuild.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hardeep/repos/parallel-course-repo/build/CMakeFiles --progress-num= "Built target ExperimentalBuild"
+.PHONY : CMakeFiles/ExperimentalBuild.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/openmp_basic.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hardeep/repos/parallel-course-repo/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/openmp_basic.dir/all
+CMakeFiles/ExperimentalBuild.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hardeep/repos/parallel-course-repo/build/CMakeFiles 0
-.PHONY : CMakeFiles/openmp_basic.dir/rule
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ExperimentalBuild.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hardeep/repos/parallel-course-repo/build/CMakeFiles 0
+.PHONY : CMakeFiles/ExperimentalBuild.dir/rule
 
 # Convenience name for target.
-openmp_basic: CMakeFiles/openmp_basic.dir/rule
+ExperimentalBuild: CMakeFiles/ExperimentalBuild.dir/rule
+
+.PHONY : ExperimentalBuild
+
+# clean rule for target.
+CMakeFiles/ExperimentalBuild.dir/clean:
+	$(MAKE) -f CMakeFiles/ExperimentalBuild.dir/build.make CMakeFiles/ExperimentalBuild.dir/clean
+.PHONY : CMakeFiles/ExperimentalBuild.dir/clean
+
+#=============================================================================
+# Target rules for target src/tests/CMakeFiles/openmp_basic.dir
+
+# All Build rule for target.
+src/tests/CMakeFiles/openmp_basic.dir/all:
+	$(MAKE) -f src/tests/CMakeFiles/openmp_basic.dir/build.make src/tests/CMakeFiles/openmp_basic.dir/depend
+	$(MAKE) -f src/tests/CMakeFiles/openmp_basic.dir/build.make src/tests/CMakeFiles/openmp_basic.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hardeep/repos/parallel-course-repo/build/CMakeFiles --progress-num=1,2 "Built target openmp_basic"
+.PHONY : src/tests/CMakeFiles/openmp_basic.dir/all
+
+# Build rule for subdir invocation for target.
+src/tests/CMakeFiles/openmp_basic.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hardeep/repos/parallel-course-repo/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 src/tests/CMakeFiles/openmp_basic.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hardeep/repos/parallel-course-repo/build/CMakeFiles 0
+.PHONY : src/tests/CMakeFiles/openmp_basic.dir/rule
+
+# Convenience name for target.
+openmp_basic: src/tests/CMakeFiles/openmp_basic.dir/rule
 
 .PHONY : openmp_basic
 
 # clean rule for target.
-CMakeFiles/openmp_basic.dir/clean:
-	$(MAKE) -f CMakeFiles/openmp_basic.dir/build.make CMakeFiles/openmp_basic.dir/clean
-.PHONY : CMakeFiles/openmp_basic.dir/clean
+src/tests/CMakeFiles/openmp_basic.dir/clean:
+	$(MAKE) -f src/tests/CMakeFiles/openmp_basic.dir/build.make src/tests/CMakeFiles/openmp_basic.dir/clean
+.PHONY : src/tests/CMakeFiles/openmp_basic.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

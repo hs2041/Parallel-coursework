@@ -222,6 +222,19 @@ NightlyMemoryCheck/fast:
 .PHONY : NightlyMemoryCheck/fast
 
 #=============================================================================
+# Target rules for targets named ExperimentalTest
+
+# Build rule for target.
+ExperimentalTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalTest
+.PHONY : ExperimentalTest
+
+# fast build rule for target.
+ExperimentalTest/fast:
+	$(MAKE) -f CMakeFiles/ExperimentalTest.dir/build.make CMakeFiles/ExperimentalTest.dir/build
+.PHONY : ExperimentalTest/fast
+
+#=============================================================================
 # Target rules for targets named ContinuousUpdate
 
 # Build rule for target.
@@ -404,32 +417,6 @@ ExperimentalStart/fast:
 .PHONY : ExperimentalStart/fast
 
 #=============================================================================
-# Target rules for targets named NightlyBuild
-
-# Build rule for target.
-NightlyBuild: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 NightlyBuild
-.PHONY : NightlyBuild
-
-# fast build rule for target.
-NightlyBuild/fast:
-	$(MAKE) -f CMakeFiles/NightlyBuild.dir/build.make CMakeFiles/NightlyBuild.dir/build
-.PHONY : NightlyBuild/fast
-
-#=============================================================================
-# Target rules for targets named ExperimentalBuild
-
-# Build rule for target.
-ExperimentalBuild: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalBuild
-.PHONY : ExperimentalBuild
-
-# fast build rule for target.
-ExperimentalBuild/fast:
-	$(MAKE) -f CMakeFiles/ExperimentalBuild.dir/build.make CMakeFiles/ExperimentalBuild.dir/build
-.PHONY : ExperimentalBuild/fast
-
-#=============================================================================
 # Target rules for targets named ExperimentalUpdate
 
 # Build rule for target.
@@ -495,17 +482,30 @@ ContinuousSubmit/fast:
 .PHONY : ContinuousSubmit/fast
 
 #=============================================================================
-# Target rules for targets named ExperimentalTest
+# Target rules for targets named NightlyBuild
 
 # Build rule for target.
-ExperimentalTest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalTest
-.PHONY : ExperimentalTest
+NightlyBuild: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NightlyBuild
+.PHONY : NightlyBuild
 
 # fast build rule for target.
-ExperimentalTest/fast:
-	$(MAKE) -f CMakeFiles/ExperimentalTest.dir/build.make CMakeFiles/ExperimentalTest.dir/build
-.PHONY : ExperimentalTest/fast
+NightlyBuild/fast:
+	$(MAKE) -f CMakeFiles/NightlyBuild.dir/build.make CMakeFiles/NightlyBuild.dir/build
+.PHONY : NightlyBuild/fast
+
+#=============================================================================
+# Target rules for targets named ExperimentalBuild
+
+# Build rule for target.
+ExperimentalBuild: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalBuild
+.PHONY : ExperimentalBuild
+
+# fast build rule for target.
+ExperimentalBuild/fast:
+	$(MAKE) -f CMakeFiles/ExperimentalBuild.dir/build.make CMakeFiles/ExperimentalBuild.dir/build
+.PHONY : ExperimentalBuild/fast
 
 #=============================================================================
 # Target rules for targets named openmp_basic
@@ -517,35 +517,8 @@ openmp_basic: cmake_check_build_system
 
 # fast build rule for target.
 openmp_basic/fast:
-	$(MAKE) -f CMakeFiles/openmp_basic.dir/build.make CMakeFiles/openmp_basic.dir/build
+	$(MAKE) -f src/tests/CMakeFiles/openmp_basic.dir/build.make src/tests/CMakeFiles/openmp_basic.dir/build
 .PHONY : openmp_basic/fast
-
-src/main.o: src/main.cpp.o
-
-.PHONY : src/main.o
-
-# target to build an object file
-src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/openmp_basic.dir/build.make CMakeFiles/openmp_basic.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
-
-src/main.i: src/main.cpp.i
-
-.PHONY : src/main.i
-
-# target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/openmp_basic.dir/build.make CMakeFiles/openmp_basic.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
-
-src/main.s: src/main.cpp.s
-
-.PHONY : src/main.s
-
-# target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/openmp_basic.dir/build.make CMakeFiles/openmp_basic.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -563,6 +536,7 @@ help:
 	@echo "... ContinuousBuild"
 	@echo "... NightlyConfigure"
 	@echo "... NightlyMemoryCheck"
+	@echo "... ExperimentalTest"
 	@echo "... ContinuousUpdate"
 	@echo "... NightlyUpdate"
 	@echo "... ExperimentalMemCheck"
@@ -577,19 +551,15 @@ help:
 	@echo "... ExperimentalCoverage"
 	@echo "... NightlyCoverage"
 	@echo "... ExperimentalStart"
-	@echo "... package"
-	@echo "... NightlyBuild"
-	@echo "... ExperimentalBuild"
 	@echo "... ExperimentalUpdate"
 	@echo "... ContinuousStart"
 	@echo "... ContinuousMemCheck"
 	@echo "... ContinuousTest"
 	@echo "... ContinuousSubmit"
-	@echo "... ExperimentalTest"
+	@echo "... NightlyBuild"
+	@echo "... ExperimentalBuild"
+	@echo "... package"
 	@echo "... openmp_basic"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
 .PHONY : help
 
 
