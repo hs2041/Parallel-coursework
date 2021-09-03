@@ -6,3 +6,15 @@
 
 #IncludeRegexTransform: 
 
+/home/hardeep/repos/parallel-course-repo/src/assignment1/src/main.cpp
+iostream
+-
+omp.h
+-
+fstream
+-
+string
+-
+eigen3/Eigen/Dense
+-
+

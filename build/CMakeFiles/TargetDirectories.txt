@@ -42,3 +42,4 @@
 /home/hardeep/repos/parallel-course-repo/build/src/assignment1/CMakeFiles/package_source.dir
 /home/hardeep/repos/parallel-course-repo/build/src/assignment1/CMakeFiles/rebuild_cache.dir
 /home/hardeep/repos/parallel-course-repo/build/src/assignment1/CMakeFiles/package.dir
+/home/hardeep/repos/parallel-course-repo/build/src/assignment1/CMakeFiles/assignment1.dir

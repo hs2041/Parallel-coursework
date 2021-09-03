@@ -520,6 +520,19 @@ openmp_basic/fast:
 	$(MAKE) -f src/tests/CMakeFiles/openmp_basic.dir/build.make src/tests/CMakeFiles/openmp_basic.dir/build
 .PHONY : openmp_basic/fast
 
+#=============================================================================
+# Target rules for targets named assignment1
+
+# Build rule for target.
+assignment1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 assignment1
+.PHONY : assignment1
+
+# fast build rule for target.
+assignment1/fast:
+	$(MAKE) -f src/assignment1/CMakeFiles/assignment1.dir/build.make src/assignment1/CMakeFiles/assignment1.dir/build
+.PHONY : assignment1/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -560,6 +573,7 @@ help:
 	@echo "... ExperimentalBuild"
 	@echo "... package"
 	@echo "... openmp_basic"
+	@echo "... assignment1"
 .PHONY : help
 
 

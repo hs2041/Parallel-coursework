@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/hardeep/repos/parallel-course-repo/src/tests/src/test1.cpp" "/home/hardeep/repos/parallel-course-repo/build/src/tests/CMakeFiles/openmp_basic.dir/src/test1.cpp.o"
+  "/home/hardeep/repos/parallel-course-repo/src/assignment1/src/main.cpp" "/home/hardeep/repos/parallel-course-repo/build/src/assignment1/CMakeFiles/assignment1.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

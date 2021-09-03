@@ -102,7 +102,7 @@ clean: src/assignment1/clean
 # Directory level rules for directory src/assignment1
 
 # Recursive "all" directory target.
-src/assignment1/all:
+src/assignment1/all: src/assignment1/CMakeFiles/assignment1.dir/all
 
 .PHONY : src/assignment1/all
 
@@ -112,7 +112,7 @@ src/assignment1/preinstall:
 .PHONY : src/assignment1/preinstall
 
 # Recursive "clean" directory target.
-src/assignment1/clean:
+src/assignment1/clean: src/assignment1/CMakeFiles/assignment1.dir/clean
 
 .PHONY : src/assignment1/clean
 
@@ -897,7 +897,7 @@ CMakeFiles/ExperimentalBuild.dir/clean:
 src/tests/CMakeFiles/openmp_basic.dir/all:
 	$(MAKE) -f src/tests/CMakeFiles/openmp_basic.dir/build.make src/tests/CMakeFiles/openmp_basic.dir/depend
 	$(MAKE) -f src/tests/CMakeFiles/openmp_basic.dir/build.make src/tests/CMakeFiles/openmp_basic.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hardeep/repos/parallel-course-repo/build/CMakeFiles --progress-num=1,2 "Built target openmp_basic"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hardeep/repos/parallel-course-repo/build/CMakeFiles --progress-num=3,4 "Built target openmp_basic"
 .PHONY : src/tests/CMakeFiles/openmp_basic.dir/all
 
 # Build rule for subdir invocation for target.
@@ -916,6 +916,33 @@ openmp_basic: src/tests/CMakeFiles/openmp_basic.dir/rule
 src/tests/CMakeFiles/openmp_basic.dir/clean:
 	$(MAKE) -f src/tests/CMakeFiles/openmp_basic.dir/build.make src/tests/CMakeFiles/openmp_basic.dir/clean
 .PHONY : src/tests/CMakeFiles/openmp_basic.dir/clean
+
+#=============================================================================
+# Target rules for target src/assignment1/CMakeFiles/assignment1.dir
+
+# All Build rule for target.
+src/assignment1/CMakeFiles/assignment1.dir/all:
+	$(MAKE) -f src/assignment1/CMakeFiles/assignment1.dir/build.make src/assignment1/CMakeFiles/assignment1.dir/depend
+	$(MAKE) -f src/assignment1/CMakeFiles/assignment1.dir/build.make src/assignment1/CMakeFiles/assignment1.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hardeep/repos/parallel-course-repo/build/CMakeFiles --progress-num=1,2 "Built target assignment1"
+.PHONY : src/assignment1/CMakeFiles/assignment1.dir/all
+
+# Build rule for subdir invocation for target.
+src/assignment1/CMakeFiles/assignment1.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hardeep/repos/parallel-course-repo/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 src/assignment1/CMakeFiles/assignment1.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hardeep/repos/parallel-course-repo/build/CMakeFiles 0
+.PHONY : src/assignment1/CMakeFiles/assignment1.dir/rule
+
+# Convenience name for target.
+assignment1: src/assignment1/CMakeFiles/assignment1.dir/rule
+
+.PHONY : assignment1
+
+# clean rule for target.
+src/assignment1/CMakeFiles/assignment1.dir/clean:
+	$(MAKE) -f src/assignment1/CMakeFiles/assignment1.dir/build.make src/assignment1/CMakeFiles/assignment1.dir/clean
+.PHONY : src/assignment1/CMakeFiles/assignment1.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

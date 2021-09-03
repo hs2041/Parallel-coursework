@@ -143,6 +143,48 @@ depend:
 	cd /home/hardeep/repos/parallel-course-repo/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+src/assignment1/CMakeFiles/assignment1.dir/rule:
+	cd /home/hardeep/repos/parallel-course-repo/build && $(MAKE) -f CMakeFiles/Makefile2 src/assignment1/CMakeFiles/assignment1.dir/rule
+.PHONY : src/assignment1/CMakeFiles/assignment1.dir/rule
+
+# Convenience name for target.
+assignment1: src/assignment1/CMakeFiles/assignment1.dir/rule
+
+.PHONY : assignment1
+
+# fast build rule for target.
+assignment1/fast:
+	cd /home/hardeep/repos/parallel-course-repo/build && $(MAKE) -f src/assignment1/CMakeFiles/assignment1.dir/build.make src/assignment1/CMakeFiles/assignment1.dir/build
+.PHONY : assignment1/fast
+
+src/main.o: src/main.cpp.o
+
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	cd /home/hardeep/repos/parallel-course-repo/build && $(MAKE) -f src/assignment1/CMakeFiles/assignment1.dir/build.make src/assignment1/CMakeFiles/assignment1.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	cd /home/hardeep/repos/parallel-course-repo/build && $(MAKE) -f src/assignment1/CMakeFiles/assignment1.dir/build.make src/assignment1/CMakeFiles/assignment1.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	cd /home/hardeep/repos/parallel-course-repo/build && $(MAKE) -f src/assignment1/CMakeFiles/assignment1.dir/build.make src/assignment1/CMakeFiles/assignment1.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -154,6 +196,10 @@ help:
 	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... package"
+	@echo "... assignment1"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 
