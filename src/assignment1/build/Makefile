@@ -222,6 +222,19 @@ NightlyMemoryCheck/fast:
 .PHONY : NightlyMemoryCheck/fast
 
 #=============================================================================
+# Target rules for targets named ExperimentalTest
+
+# Build rule for target.
+ExperimentalTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalTest
+.PHONY : ExperimentalTest
+
+# fast build rule for target.
+ExperimentalTest/fast:
+	$(MAKE) -f CMakeFiles/ExperimentalTest.dir/build.make CMakeFiles/ExperimentalTest.dir/build
+.PHONY : ExperimentalTest/fast
+
+#=============================================================================
 # Target rules for targets named ContinuousUpdate
 
 # Build rule for target.
@@ -469,32 +482,6 @@ ContinuousMemCheck/fast:
 .PHONY : ContinuousMemCheck/fast
 
 #=============================================================================
-# Target rules for targets named ExperimentalTest
-
-# Build rule for target.
-ExperimentalTest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ExperimentalTest
-.PHONY : ExperimentalTest
-
-# fast build rule for target.
-ExperimentalTest/fast:
-	$(MAKE) -f CMakeFiles/ExperimentalTest.dir/build.make CMakeFiles/ExperimentalTest.dir/build
-.PHONY : ExperimentalTest/fast
-
-#=============================================================================
-# Target rules for targets named run
-
-# Build rule for target.
-run: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 run
-.PHONY : run
-
-# fast build rule for target.
-run/fast:
-	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/build
-.PHONY : run/fast
-
-#=============================================================================
 # Target rules for targets named ContinuousTest
 
 # Build rule for target.
@@ -520,32 +507,45 @@ ContinuousSubmit/fast:
 	$(MAKE) -f CMakeFiles/ContinuousSubmit.dir/build.make CMakeFiles/ContinuousSubmit.dir/build
 .PHONY : ContinuousSubmit/fast
 
-src/main.o: src/main.cpp.o
+#=============================================================================
+# Target rules for targets named parallel_basic
 
-.PHONY : src/main.o
+# Build rule for target.
+parallel_basic: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 parallel_basic
+.PHONY : parallel_basic
+
+# fast build rule for target.
+parallel_basic/fast:
+	$(MAKE) -f CMakeFiles/parallel_basic.dir/build.make CMakeFiles/parallel_basic.dir/build
+.PHONY : parallel_basic/fast
+
+src/parallel_basic.o: src/parallel_basic.cpp.o
+
+.PHONY : src/parallel_basic.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+src/parallel_basic.cpp.o:
+	$(MAKE) -f CMakeFiles/parallel_basic.dir/build.make CMakeFiles/parallel_basic.dir/src/parallel_basic.cpp.o
+.PHONY : src/parallel_basic.cpp.o
 
-src/main.i: src/main.cpp.i
+src/parallel_basic.i: src/parallel_basic.cpp.i
 
-.PHONY : src/main.i
+.PHONY : src/parallel_basic.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+src/parallel_basic.cpp.i:
+	$(MAKE) -f CMakeFiles/parallel_basic.dir/build.make CMakeFiles/parallel_basic.dir/src/parallel_basic.cpp.i
+.PHONY : src/parallel_basic.cpp.i
 
-src/main.s: src/main.cpp.s
+src/parallel_basic.s: src/parallel_basic.cpp.s
 
-.PHONY : src/main.s
+.PHONY : src/parallel_basic.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+src/parallel_basic.cpp.s:
+	$(MAKE) -f CMakeFiles/parallel_basic.dir/build.make CMakeFiles/parallel_basic.dir/src/parallel_basic.cpp.s
+.PHONY : src/parallel_basic.cpp.s
 
 # Help Target
 help:
@@ -563,6 +563,7 @@ help:
 	@echo "... ContinuousBuild"
 	@echo "... NightlyConfigure"
 	@echo "... NightlyMemoryCheck"
+	@echo "... ExperimentalTest"
 	@echo "... ContinuousUpdate"
 	@echo "... NightlyUpdate"
 	@echo "... ExperimentalMemCheck"
@@ -583,13 +584,12 @@ help:
 	@echo "... ExperimentalUpdate"
 	@echo "... ContinuousStart"
 	@echo "... ContinuousMemCheck"
-	@echo "... ExperimentalTest"
-	@echo "... run"
 	@echo "... ContinuousTest"
 	@echo "... ContinuousSubmit"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... parallel_basic"
+	@echo "... src/parallel_basic.o"
+	@echo "... src/parallel_basic.i"
+	@echo "... src/parallel_basic.s"
 .PHONY : help
 
 

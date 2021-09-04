@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/hardeep/repos/parallel-course-repo/src/assignment1/src/parallel_basic.cpp
+omp.h
+-
+iostream
+-
+fstream
+-
+string
+-
+iomanip
+-
+chrono
+-
+

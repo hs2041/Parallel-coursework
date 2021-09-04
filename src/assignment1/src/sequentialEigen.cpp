@@ -89,9 +89,7 @@ int main(){
         for (int i = 0; i < X; i++)
         {
             for (int j = 0; j < Y; j++)
-            {
                 outfile << std::scientific << data(i + U / 2, j + V / 2) << " ";
-            }
             outfile << "\n";
         }
 

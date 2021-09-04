@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/parallel_basic.dir/src/parallel_basic.cpp.o  -o parallel_basic  -lgomp -lpthread 
