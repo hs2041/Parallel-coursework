@@ -11,9 +11,9 @@ include_directories(include)
 include_directories(
 	${EIGEN3_INCLUDE_DIRS}
     )
-    
+     
 add_subdirectory(src/tests)
-add_subdirectory(src/assignment1)
+# add_subdirectory(src/assignment1)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
