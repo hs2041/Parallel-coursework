@@ -62,7 +62,7 @@ UpdateOptions:
 UpdateType: 
 
 # Compiler info
-Compiler: /usr/bin/c++
+Compiler: /bin/c++
 CompilerVersion: 9.3.0
 
 # Dynamic analysis (MemCheck)

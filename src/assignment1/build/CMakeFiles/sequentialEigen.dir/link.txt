@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/sequentialEigen.dir/src/sequentialEigen.cpp.o  -o sequentialEigen  -lgomp -lpthread 

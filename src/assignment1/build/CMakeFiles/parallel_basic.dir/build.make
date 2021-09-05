@@ -60,15 +60,15 @@ include CMakeFiles/parallel_basic.dir/flags.make
 CMakeFiles/parallel_basic.dir/src/parallel_basic.cpp.o: CMakeFiles/parallel_basic.dir/flags.make
 CMakeFiles/parallel_basic.dir/src/parallel_basic.cpp.o: ../src/parallel_basic.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hardeep/repos/parallel-course-repo/src/assignment1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/parallel_basic.dir/src/parallel_basic.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/parallel_basic.dir/src/parallel_basic.cpp.o -c /home/hardeep/repos/parallel-course-repo/src/assignment1/src/parallel_basic.cpp
+	/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/parallel_basic.dir/src/parallel_basic.cpp.o -c /home/hardeep/repos/parallel-course-repo/src/assignment1/src/parallel_basic.cpp
 
 CMakeFiles/parallel_basic.dir/src/parallel_basic.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/parallel_basic.dir/src/parallel_basic.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hardeep/repos/parallel-course-repo/src/assignment1/src/parallel_basic.cpp > CMakeFiles/parallel_basic.dir/src/parallel_basic.cpp.i
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hardeep/repos/parallel-course-repo/src/assignment1/src/parallel_basic.cpp > CMakeFiles/parallel_basic.dir/src/parallel_basic.cpp.i
 
 CMakeFiles/parallel_basic.dir/src/parallel_basic.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/parallel_basic.dir/src/parallel_basic.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hardeep/repos/parallel-course-repo/src/assignment1/src/parallel_basic.cpp -o CMakeFiles/parallel_basic.dir/src/parallel_basic.cpp.s
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hardeep/repos/parallel-course-repo/src/assignment1/src/parallel_basic.cpp -o CMakeFiles/parallel_basic.dir/src/parallel_basic.cpp.s
 
 # Object files for target parallel_basic
 parallel_basic_OBJECTS = \
